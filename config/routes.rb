@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root'static_clients#home'
+  root 'clients#index'
+
+
 
   get'/about', to:'static_clients#about'
 

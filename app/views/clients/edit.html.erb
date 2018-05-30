@@ -1,24 +1,26 @@
-<h1>Edit Client/h1>
+<h1>Edit Client</h1>
 <%=form_for @client do |f| %>
-  <%=f.lable :client %>
-  <%=f.text_field :client %>
+  
 
-  <%=f.lable :name %>
-  <%=f.text_field :name %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-  <%=f.lable :hair_color %>
+ 
+
+
+  <%=f.label :hair_color %>
   <%=f.text_field :hair_color %>
 
-  <%=f.lable :eye_color %>
+  <%=f.label :eye_color %>
   <%=f.text_field :eye_color %>
 
-  <%=f.lable :gender %>
+  <%=f.label :gender %>
   <%=f.text_field :gender %>
 
-  <%=f.lable :age %>
+  <%=f.label :age %>
   <%=f.number_field :age %>
 
-  <%=f.lable :alive %>
+  <%=f.label :alive %>
   <%=f.text_field :alive %>
 
   <%=f.submit%>

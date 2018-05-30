@@ -12,7 +12,7 @@ class ClientsController < ApplicationController
   end
 
   def create
-    @client = Client.new(clients_params)
+    @client = Client.new(client_params)
 
   if @client.save
     redirect_to clients_path
@@ -29,7 +29,7 @@ class ClientsController < ApplicationController
     @client = Client.find(params[:id])
 
     if @client.update(client_params)
-      redirect_to clients_path
+      redirect_to client_path
     else
       render :edit
     end
@@ -39,9 +39,7 @@ class ClientsController < ApplicationController
     Client.find(params[:id]).destroy
     redirect_to clients_path
   end
-
-
-
+end
 
 
 
@@ -49,5 +47,4 @@ private
 
 def client_params
   params.require(:client).permit(:name, :hair_color, :eye_color, :gender, :age, :alive)
-end
 end
